@@ -1,5 +1,7 @@
 {
   "scripts": {
+    "build": "yarn run webpack",
+    "start": "yarn run webpack-dev-server",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js \"test/**/*@(.js|.jsx)\"",
     "test:watch": "yarn run test -- --watch"
   },

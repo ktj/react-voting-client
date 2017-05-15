@@ -10,6 +10,7 @@ import remoteActionMiddleware from './remote_action_middleware';
 import App from './components/App';
 import {VotingContainer} from './components/Voting';
 import {ResultsContainer} from './components/Results';
+import {WrapperContainer} from './components/Wrapper';
 
 const socket = io(`${location.protocol}//${location.hostname}:8090`);
 
@@ -25,6 +26,7 @@ socket.on('state', state =>
 
 const routes = <Route component={App}>
 	<Route path="/results" component={ResultsContainer} />
+	<Route path="/testi" component={WrapperContainer} />
   <Route path="/" component={VotingContainer} />
 </Route>;
 

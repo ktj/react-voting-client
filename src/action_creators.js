@@ -12,3 +12,10 @@ export function vote(entry) {
     entry
   };
 }
+
+export function changeDirection(direction) {
+	return {
+		type: 'CHANGE_DIRECTION',
+		direction
+	};
+}

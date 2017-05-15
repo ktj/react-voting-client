@@ -23,12 +23,18 @@ function resetVote(state) {
   }
 }
 
+function changeDirection(state, direction) {
+  return state.set('direction', direction);
+}
+
 export default function(state = Map(), action) {
 	switch (action.type) {
   case 'SET_STATE':
     return resetVote(setState(state, action.state));
   case 'VOTE':
     return vote(state, action.entry);
+  case 'CHANGE_DIRECTION':
+    return changeDirection(state, action.direction);
   }
   return state;
 }
